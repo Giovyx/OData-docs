@@ -11,7 +11,7 @@ ms.date: 9/28/2020
 
 The query options part of an OData URL can be quite long, potentially exceeding the maximum length that many hosting environments (including IIS) impose. This can limit the client's ability to request the exact set of data they are interested in, especially when using explict select statements.
 
-OData WebApi V7.5 introduced support for passing query options in the request body. You append `/query` to the resource path of the URL, use the `POST` verb instead of `GET`, and pass the query options part of the URL in the request body.
+OData WebApi V7.5 introduced support for passing query options in the request body. You append `/$query` to the resource path of the URL, use the `POST` verb instead of `GET`, and pass the query options part of the URL in the request body.
 ### Example
 POST: `http://ServiceRoot/Movies/$query`  
 Content-Type: `text/plain`  
